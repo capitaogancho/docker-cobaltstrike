@@ -8,6 +8,7 @@ IPADDRESS="$(ip address | grep 'state UP' -A2 | tail -n1 | awk '{print $2}' | cu
 mkdir /root/.ssh
 
 echo ${SSH_KEY} > /root/.ssh/authorized_keys
+service ssh start
 
 cd /opt/cobaltstrike
 /opt/cobaltstrike/key.sh ${COBALTSTRIKE_KEY}
