@@ -4,25 +4,4 @@
 
 
 
-## Description
-
-
-
-## Usage
-
-#### Quickstart
-
-
-
-#### Building the image
-
-
-
-#### Different gophish version
-
-
-
-## Contributing
-
-
 
