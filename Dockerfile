@@ -17,6 +17,7 @@ RUN apt-get update && \
 apt-get install --no-install-recommends -y \
 oracle-java8-installer \
 ca-certificates \
+openssh-server \
 expect && \
 apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* &&\
 update-java-alternatives -s java-8-oracle 
@@ -40,4 +41,5 @@ RUN mkdir /opt/cobaltstrike/profiles
 COPY ./profiles/*.profile /opt/cobaltstrike/profiles/
 
 EXPOSE 50050
+EXPOSE 22
 ENTRYPOINT ["/opt/docker-entrypoint.sh"]
