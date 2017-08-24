@@ -24,7 +24,7 @@ update-java-alternatives -s java-8-oracle
 
 
 WORKDIR /opt
-RUN wget -nv https://f001.backblazeb2.com/file/thedarkcloud/cobaltstrike/cobaltstrike-trial.tgz && \
+RUN wget -nv https://download.thedarkcloud.net/file/thedarkcloud/cobaltstrike/cobaltstrike-trial.tgz && \
 tar zxvf cobaltstrike-trial.tgz && \
 rm -f cobaltstrike-trial.tgz
 
