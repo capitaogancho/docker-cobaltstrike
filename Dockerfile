@@ -22,13 +22,8 @@ expect && \
 apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* &&\
 update-java-alternatives -s java-8-oracle 
 
-
 WORKDIR /opt
-RUN wget -nv https://f001.backblazeb2.com/file/thedarkcloud/cobaltstrike/cobaltstrike-trial.tgz && \
-tar zxvf cobaltstrike-trial.tgz && \
-rm -f cobaltstrike-trial.tgz
-
-WORKDIR /opt
+RUN mkdir /opt/cobaltstrike
 COPY ./docker-entrypoint.sh /opt/
 COPY ./cloudfront.sh /opt/cobaltstrike/
 COPY ./key.sh /opt/cobaltstrike/
