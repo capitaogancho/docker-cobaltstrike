@@ -22,6 +22,15 @@ expect && \
 apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* &&\
 update-java-alternatives -s java-8-oracle 
 
+<<<<<<< HEAD
+=======
+
+WORKDIR /opt
+RUN wget -nv https://download.thedarkcloud.net/file/thedarkcloud/cobaltstrike/cobaltstrike-trial.tgz && \
+tar zxvf cobaltstrike-trial.tgz && \
+rm -f cobaltstrike-trial.tgz
+
+>>>>>>> 5ece830367a6a9d9544bd0a2be4361146f153e61
 WORKDIR /opt
 RUN mkdir /opt/cobaltstrike
 COPY ./docker-entrypoint.sh /opt/
